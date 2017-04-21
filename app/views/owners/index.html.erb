@@ -1,13 +1,7 @@
-<h1>Owners</h1>
+<h1>All Owners and all their cleaners</h1>
 
-<ul id="owners">
-  <% @owners.each do |owner| %>
-    <li><%= owner.first_name %> <%= owner.last_name %>
-      <ul>
-        <% owner.units.each do |unit| %>
-          <li><%= unit.name %></li>
-        <% end %>
-      </ul>
-    </li>
+<% @owners.each do |owner| %>
+  <%= owner.first_name %> <%= owner.last_name %>
+  <%= owner.cleaners.each do |cleaner| %>
   <% end %>
-</ul>
+<% end %>
